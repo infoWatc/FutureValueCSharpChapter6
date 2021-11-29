@@ -15,7 +15,8 @@ namespace FutureValue
         {
             InitializeComponent();
         }
-
+        
+        // Calculate Button
         private void btnCalculate_Click(object sender, EventArgs e)
         {
             decimal monthlyInvestment, yearlyInterestRate;
@@ -32,14 +33,16 @@ namespace FutureValue
 
 
         }
-
+        
+        // Method Tuple
         private void ConvertStringToDecimal(out decimal monthlyInvestment, out decimal yearlyInterestRate, out int years)
         {
             monthlyInvestment = Convert.ToDecimal(txtMonthlyInvestment.Text);
             yearlyInterestRate = Convert.ToDecimal(txtYearlyInterestRate.Text);
             years = Convert.ToInt32(txtYears.Text);
         }
-
+        
+        // Close Form Method
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -57,13 +60,14 @@ namespace FutureValue
 
             return futureValue;
         }
-
-
+        
+        // Clear txtFutureVlaue Text Box
         private void ClearFutureValue(object sender, EventArgs e)
         {
             txtFutureValue.Text = "";
         }
-
+        
+        // Double Click Event to clear fields, set in properties
         private void ClearFutureValue_DoubleClick(object sender, EventArgs e)
         {
             txtFutureValue.Text = string.Empty;
@@ -71,12 +75,14 @@ namespace FutureValue
             txtMonthlyInvestment.Text = string.Empty;
             txtYears.Text = string.Empty;
         }
-
+        
+        // MousHover Event to clear field
         private void txtMonthlyInvestment_MouseHover(object sender, EventArgs e)
         {
             txtMonthlyInvestment.Text = string.Empty;
         }
-
+        
+        // DoubleClick Event to automatically insert 12 into field
         private void txtYearlyInterestRate_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             txtYearlyInterestRate.Text = "12";
